@@ -12,7 +12,7 @@ const routes: RouteRecordRaw[] = [
   },
   {
     path: '/introduction',
-    component: () => import('@/components/main/welcome/Welcome.vue')
+    component: () => import('@/components/main/introduction/Introduction.vue')
   },
   {
     path: '/skill',
