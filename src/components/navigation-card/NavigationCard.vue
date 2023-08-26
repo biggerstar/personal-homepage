@@ -2,6 +2,7 @@
   <div class="navigation-card-container">
     <router-link
       v-for="(item,barName) in allBar"
+      @click="routerLinkClick(barName)"
       class="navigation-item"
       :to="barName"
       :class="{'active-card':activeName === barName}"
@@ -20,6 +21,7 @@
 <script setup>
 import {inject, onMounted, ref} from "vue";
 import gsap from 'gsap'
+import {choiceAnimation, execAnimation} from "@/utils/common";
 import {HelpFilled} from '@element-plus/icons-vue'
 
 const useConfig = inject('useConfig')
@@ -27,6 +29,22 @@ const activeName = ref(location.pathname.replace('/', ''))
 
 
 const allBar = useConfig.page
+let animationRunning = false
+const mainContainerClass = '#el-main'
+const mainCloneContainerClass = '.el-main-clone-box'
+
+function routerLinkClick(barName) {
+  if (animationRunning) return;  // 正在动画中或者已经在某个标签，阻止继续其创建动画
+  if (activeName.value === barName) return;
+  activeName.value = barName
+  animationRunning = true
+  //-----------------------------------------------------------------
+  let animation
+  animation = choiceAnimation()
+  execAnimation(animation, mainContainerClass, mainCloneContainerClass).then(() => {
+    animationRunning = false
+  })
+}
 
 onMounted(() => {
   gsap.from('.navigation-item', {
