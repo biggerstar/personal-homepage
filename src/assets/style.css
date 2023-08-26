@@ -121,3 +121,25 @@ button:focus-visible {
   }
 }
 
+
+/* 创建水波纹效果 */
+.waves {
+  width: 400px;
+  height: 200px;
+  /* 波纹颜色 */
+  --c: #87c0ca;
+  --w1: radial-gradient(100% 57.1% at top, #0000 100%, var(--c) 100.5%) no-repeat;
+  --w2: radial-gradient(100% 57.1% at bottom, var(--c) 100%, #0000 100.5%) no-repeat;
+  background: var(--w1), var(--w2), var(--w1), var(--w2);
+  background-size: 50.5% 100%;
+  animation: wave-animate 6s infinite linear;
+}
+
+@keyframes wave-animate {
+  from {
+    background-position-x: -200%, -100%, 0, 100%;
+  }
+  to {
+    background-position-x: 0, 100%, 200%, 300%;
+  }
+}

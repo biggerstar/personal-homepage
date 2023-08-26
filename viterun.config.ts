@@ -4,6 +4,7 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import {ElementPlusResolver} from 'unplugin-vue-components/resolvers'
 import ElementPlus from 'unplugin-element-plus/vite'
+import bundleAnalyzer from 'rollup-plugin-bundle-analyzer'
 import {defineViteRunConfig, viteRunLogPlugin} from 'vite-run'
 
 
@@ -20,6 +21,11 @@ export default defineViteRunConfig({
       ]
     }
   },
+  plugins: {
+    bundleAnalyzer: [
+      bundleAnalyzer({})
+    ]
+  },
   server: {
     10000: {
       port: 10000
@@ -33,14 +39,14 @@ export default defineViteRunConfig({
       plugins: [
         vue(),
         viteRunLogPlugin({
-          build:{
-            viteLog:{
-              transforming:true
+          build: {
+            viteLog: {
+              transforming: true
             },
           },
-          server:{
-            viteLog:{
-              transforming:true
+          server: {
+            viteLog: {
+              transforming: true
             },
           }
         }),

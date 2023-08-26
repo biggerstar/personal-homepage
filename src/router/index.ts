@@ -20,15 +20,15 @@ const routes: RouteRecordRaw[] = [
   },
   {
     path: '/project',
-    component: () => import('@/components/main/welcome/Welcome.vue')
+    component: () => import('@/components/main/project/Project.vue')
   },
   {
     path: '/experience',
-    component: () => import('@/components/main/welcome/Welcome.vue')
+    component: () => import('@/components/main/experience/Experience.vue')
   },
   {
     path: '/about',
-    component: () => import('@/components/main/welcome/Welcome.vue')
+    component: () => import('@/components/main/about/About.vue')
   }
 ]
 
