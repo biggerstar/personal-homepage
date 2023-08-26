@@ -14,10 +14,8 @@ export default {
   page: {
     welcome: {
       icon: HomeFilled,
-      stick: {
-        desc: '欢迎',
-        color: '#dcd1be'
-      },
+      title: 'Welcome',
+      desc: '欢迎来到我的主页',
     },
     introduction: {
       icon: Avatar,
