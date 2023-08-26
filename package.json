@@ -12,12 +12,14 @@
     "@element-plus/icons-vue": "^2.1.0",
     "clipboard": "^2.0.11",
     "element-plus": "^2.3.9",
+    "gsap": "^3.12.2",
     "vue": "^3.3.4",
     "vue-router": "^4.2.4"
   },
   "devDependencies": {
     "@types/node": "^20.5.1",
     "@vitejs/plugin-vue": "^4.2.3",
+    "sass": "^1.66.1",
     "typescript": "^5.0.2",
     "unplugin-auto-import": "^0.16.6",
     "unplugin-element-plus": "^0.8.0",
