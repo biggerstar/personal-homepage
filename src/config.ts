@@ -80,6 +80,100 @@ export default {
         desc: '技能',
         color: '#dcd1be'
       },
+      /* 前端技能分布模块配置 */
+      skillBarChart: {
+        title: {
+          text: '前端技能分布图',
+          left: 'center',
+        },
+        visualMap: {
+          text: ['精通', '小白'],
+          inRange: {
+            color: ['#aed0ee', '#2ecc71', '#f9ca24', '#FD665F']
+          },
+        },
+        x: {
+          category: ['小白', '了解', '熟悉', '掌握', '熟练', '精通']
+        },
+        y: {
+          data: [
+            {value: 90, skill: 'Javascript'},
+            {value: 76, skill: 'Node.js'},
+            {value: 76, skill: 'TypeScript'},
+            {value: 74, skill: 'Vue2/Vue3'},
+            {value: 70, skill: 'Vite/Rollup'},
+            {value: 68, skill: 'Sass/Less/Css3'},
+            {value: 60, skill: 'Element-plus/Antd'},
+            // {value: 56, skill: 'Express'},
+          ]
+        }
+      },
+      /* 其他技能标签和组件映射 */
+      otherSkillActiveTagName: 'backend',
+      otherSkillCardTitle: '一些奇奇怪怪的技能',
+      componentMapping: {
+        backend: {
+          label: 'Backend',
+          items: [
+            {
+              icon: 'images/expressjs.svg',
+              title: 'Express.js',
+              desc: 'Node.js后端web服务框架',
+            },
+            {
+              icon: 'images/mysql.svg',
+              title: 'MySQL',
+              desc: '关系型数据库管理系统',
+            },
+            {
+              icon: 'images/django.svg',
+              title: 'Django',
+              desc: 'Python后端web服务框架',
+            },
+            {
+              icon: 'images/mongoDB.svg',
+              title: 'mongoDB',
+              desc: 'NoSQL数据库',
+            },
+          ]
+        },
+        other: {
+          label: 'Other',
+          items: [
+            {
+              icon: 'images/github.svg',
+              title: 'Git',
+              desc: '代码管理',
+            },
+            {
+              icon: 'images/scrapy.png',
+              title: 'Scrapy',
+              desc: 'Python爬虫框架',
+            },
+            {
+              icon: 'images/selenium.svg',
+              title: 'Selenium',
+              desc: 'Python自动化测试框架',
+            },
+
+          ]
+        },
+      },
+      /* 正在学习的技能 */
+      skillLearningTitle: '正在学习的技能',
+      skillLearningActiveTagName: 'learning',
+      skillLearning: {
+        learning: {
+          label: 'Learning',
+          items: [
+            {
+              icon: 'images/react.svg',
+              title: 'React.js',
+              desc: '前端web框架',
+            },
+          ]
+        },
+      }
     },
     project: {
       icon: Menu,
