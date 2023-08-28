@@ -4,27 +4,6 @@ vite 将合并 [额外的dts声明] 到指定的输出文件中，
 解决了`declare module` 和 `declare global`
 无法正常添加到打包d.ts目标声明文件中的问题
 
-<h1 align="center">vite-run</h1>
-<br/>
-<p align="center">
-    <a href="https://npmjs.com/package/vite-run">
-        <img src="https://img.shields.io/npm/v/vite-run.svg" alt="npm package">
-    </a>
-    <a href="https://img.shields.io/npm/l/vite-run">
-      <img src="https://img.shields.io/npm/l/vite-run?" alt="license"/>
-    </a>
-</p>
-<br/>
-
-
-**中文** | [English](./README.md)
-
-vite 多配置执行支持, 配置共享，像搭积木一样自由组合配置，
-颗粒度精确到单字段配置。
-它可以完全替代`vite.config`,您无需在每个包中都创建一个`vite.config`配置
-该工具在`pnpm` 多包模式下开发
-
-
 ## install
 
 - yarn
