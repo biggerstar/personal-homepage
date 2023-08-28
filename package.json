@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite-run dev",
+    "preview": "vite-run preview",
     "build": " vite-run build",
     "size": "vite-run size"
   },
@@ -15,6 +16,9 @@
     "element-plus": "^2.3.9",
     "gsap": "^3.12.2",
     "lodash": "^4.17.21",
+    "marked": "^7.0.5",
+    "marked-highlight": "^2.0.4",
+    "prismjs": "^1.29.0",
     "vue": "^3.3.4",
     "vue-echarts": "^6.6.1",
     "vue-router": "^4.2.4"

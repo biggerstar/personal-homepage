@@ -1,4 +1,4 @@
-import {Avatar, Flag, Histogram, HomeFilled, Menu, Opportunity} from "@element-plus/icons-vue";
+import {Avatar, Histogram, HomeFilled, Menu, Opportunity} from "@element-plus/icons-vue";
 
 export default {
   profile: {
@@ -43,7 +43,7 @@ export default {
         },
         {
           type: '电话',
-          desc: '15159669885'
+          desc: '1515***9885'
         },
         {
           type: '邮箱',
@@ -169,7 +169,12 @@ export default {
             {
               icon: 'images/react.svg',
               title: 'React.js',
-              desc: '前端web框架',
+              desc: '流行前端web框架',
+            },
+            {
+              icon: 'images/vitest.svg',
+              title: 'Vitest',
+              desc: 'Vite提供支持的极速单元测试框架',
             },
           ]
         },
@@ -181,13 +186,171 @@ export default {
         desc: '项目',
         color: '#B8CCE3'
       },
-    },
-    experience: {
-      icon: Flag,
-      stick: {
-        desc: '经历',
-        color: '#ACCCC1'
-      },
+      projectItemsTitle: '项目展示',
+      projectItems: [
+        {
+          title: 'Personal-homepage',
+          type: '个人主页模板',
+          image: '/big-images/personal-homepage.png',
+          desc: '一款基于Vue3的个人主页模板',
+          detail: {
+            title: 'Personal-homepage',
+            md: '/md/personal-homepage.md',
+            baseInfo: {
+              git: {
+                icon: 'icon-github',
+                alias: 'Git',
+                link: 'https://github.com/biggerstar/personal-homepage',
+                value: '去看看'
+              },
+              languages: {
+                icon: 'icon-code',
+                alias: '技术栈',
+                value: 'Typescript + Sass + Vue3'
+              },
+            }
+          },
+        },
+        {
+          title: 'vite-run',
+          type: '效率工具',
+          image: '/big-images/vite-run.png',
+          desc: 'Vite 多配置运行支持',
+          detail: {
+            title: 'vite-run',
+            md: '/md/vite-run.md',
+            baseInfo: {
+              git: {
+                icon: 'icon-github',
+                alias: 'Git',
+                link: 'https://github.com/biggerstar/vite-run',
+                value: '去看看'
+              },
+              languages: {
+                icon: 'icon-code',
+                alias: '技术栈',
+                value: 'Typescript + Commander.js'
+              },
+            }
+          },
+        },
+        {
+          type: '效率工具',
+          title: '',
+          image: '/big-images/any-grid-layout.png',
+          desc: '一款快速网格布局的高性能前端库，支持跨容器拖动元素，无副作用调整大小，响应式布局，静态布局',
+          detail: {
+            title: 'any-grid-layout',
+            md: '/md/any-grid-layout.md',
+            baseInfo: {
+              git: {
+                icon: 'icon-github',
+                alias: 'Git',
+                link: 'https://github.com/biggerstar/any-grid-layout',
+                value: '去看看'
+              },
+              languages: {
+                icon: 'icon-code',
+                alias: '语言',
+                value: 'TypeScript'
+              },
+            }
+          },
+        },
+        {
+          type: '效率工具',
+          title: '',
+          image: '/big-images/TiYi.js.png',
+          desc: '浏览器记录栈的映射管理控制与功能拓展,支持监听浏览器前进后退',
+          detail: {
+            title: 'TiYi.js',
+            md: '/md/TiYi.js.md',
+            baseInfo: {
+              git: {
+                icon: 'icon-github',
+                alias: 'Git',
+                link: 'https://github.com/biggerstar/TiYi.js',
+                value: '去看看'
+              },
+              languages: {
+                icon: 'icon-code',
+                alias: '语言',
+                value: 'TypeScript'
+              },
+            }
+          },
+        },
+        {
+          type: 'Vite打包插件',
+          image: '/big-images/vite-plugin-copy-dts.png',
+          title: ' ',
+          desc: '合并「 declare module 」和「 declare global 」ts类型定义到目标dts声明文件中',
+          detail: {
+            title: 'vite-plugin-copy-dts',
+            md: '/md/vite-plugin-copy-dts.md',
+            baseInfo: {
+              git: {
+                icon: 'icon-github',
+                alias: 'Git',
+                link: 'https://github.com/biggerstar/vite-plugin-copy-dts',
+                value: '去看看'
+              },
+              languages: {
+                icon: 'icon-code',
+                alias: '语言',
+                value: 'Typescript'
+              },
+            }
+          },
+        },
+        {
+          type: '爬虫框架',
+          image: '/big-images/ESpider.png',
+          title: '',
+          desc: '一款node端高并发爬虫框架，支持队列,调度，数据管道，中间件，api简单易用',
+          detail: {
+            title: 'ESpider',
+            md: '/md/ESpider.md',
+            baseInfo: {
+              git: {
+                icon: 'icon-github',
+                alias: 'Git',
+                link: 'https://github.com/biggerstar/ESpider',
+                value: '去看看'
+              },
+              languages: {
+                icon: 'icon-code',
+                alias: '语言',
+                value: 'Javascript'
+              },
+            }
+          },
+        },
+        {
+          type: '工具',
+          image: '/big-images/history-stack-manager.png',
+          title: '',
+          desc: '浏览器记录栈的映射管理控制与功能拓展,支持监听浏览器前进后退',
+          detail: {
+            title: 'History-stack-manager',
+            md: '/md/history-stack-manager.md',
+            baseInfo: {
+              git: {
+                icon: 'icon-github',
+                alias: 'Git',
+                link: 'https://github.com/biggerstar/history-stack-manager',
+                value: '去看看'
+              },
+              languages: {
+                icon: 'icon-code',
+                alias: '语言',
+                value: 'TypeScript'
+              },
+            }
+          },
+        },
+
+      ],
     },
     about: {
       icon: Opportunity,
@@ -198,3 +361,4 @@ export default {
     },
   }
 }
+

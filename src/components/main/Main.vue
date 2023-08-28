@@ -1,10 +1,11 @@
 <template>
-  <el-scrollbar
-    class="main-outer-container"
-    :noresize=true
-  >
-    <router-view></router-view>
-  </el-scrollbar>
+  <div class="main-outer-container">
+    <el-scrollbar
+      :noresize=true
+    >
+      <router-view></router-view>
+    </el-scrollbar>
+  </div>
 </template>
 
 <script setup lang="ts">

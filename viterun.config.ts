@@ -16,6 +16,7 @@ export default defineViteRunConfig({
     'personal-homepage': {
       dev: ['10000'],
       build: ['build'],
+      preview: ['p10000'],
       size: [
         ['build', 'bundleAnalyzer']
       ]
@@ -33,6 +34,11 @@ export default defineViteRunConfig({
   },
   build: {
     build: {}
+  },
+  preview: {
+    p10000: {
+      port: 10000
+    }
   },
   baseConfig() {
     return {

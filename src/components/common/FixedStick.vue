@@ -44,6 +44,7 @@ const {color: bgColor, opacity: opacityNum} = props
   opacity: v-bind(opacityNum);
   background: v-bind(bgColor);
   color: rgba(72, 70, 70);
+  z-index: 100;
 }
 
 </style>

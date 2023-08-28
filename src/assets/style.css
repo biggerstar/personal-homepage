@@ -102,13 +102,36 @@ button:focus-visible {
   filter: drop-shadow(1px 1px 5px #abd5ec);
 }
 
+.box-shadow {
+  box-shadow: 0 0 1px rgba(143, 133, 133, 0.1),
+  0 0 3px rgba(143, 133, 133, 0.1),
+  0 0 7px rgba(143, 133, 133, 0.1),
+  0 0 12px rgba(143, 133, 133, 0.1);
+}
+
 /*重置ui框架样式*/
 
 .el-main {
   --el-main-padding: 0
 }
 
+.dialog__header, .el-dialog__header {
+  height: 0;
+  padding: 0;
+}
 
+.el-dialog {
+  border-radius: 20px !important;
+  width: 90vw !important;
+  max-width: 1400px;
+  min-width: 300px;
+  overflow: hidden;
+  max-height: 80vh;
+  --el-dialog-margin-top: 10vh !important;
+}
+
+
+/*---------------------------------------------------*/
 @media screen and (max-width: 768px) {
   html, body {
     font-size: 14px;

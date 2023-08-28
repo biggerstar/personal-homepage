@@ -67,7 +67,8 @@ $card-width: 250px;
 }
 
 .item-card:hover {
-  transform: scale(1.02) translateY(-5px);
+  transform: scale(1.02) translateY(-3px);
+  box-shadow: 0 0 20px rgba(143, 133, 133, 0.36);
 }
 
 .item-icon, .item-icon > img {
