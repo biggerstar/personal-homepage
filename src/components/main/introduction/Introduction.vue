@@ -23,7 +23,7 @@
         <span>{{ item.desc }}</span>
       </div>
     </div>
-    <div class="person-tag-info">
+    <div class="person-tags-info">
       <Title font-size="1.3rem" underline-bottom='#3498db' class="shadow-text-line">
         {{pageConfig.personTagsTitle}}
       </Title>
@@ -66,7 +66,7 @@ onMounted(() => {
     .from('.person-base-info-box', {
       x: -50,
     }, '<')
-    .from('.person-tag-info', {
+    .from('.person-tags-info', {
       x: 50,
     }, '<')
 })
@@ -102,7 +102,7 @@ onMounted(() => {
   width: 45%;
 }
 
-.person-tag-info {
+.person-tags-info {
   width: 40%;
   flex: 1;
   max-width: 360px;

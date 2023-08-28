@@ -5,11 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite-run dev",
-    "preview": "vite-run preview",
+    "preview": "vite-run build && vite-run preview",
     "build": " vite-run build",
     "size": "vite-run size"
   },
   "dependencies": {
+    "@amap/amap-jsapi-loader": "^1.0.1",
+    "@amap/amap-jsapi-types": "^0.0.13",
     "@element-plus/icons-vue": "^2.1.0",
     "clipboard": "^2.0.11",
     "echarts": "^5.4.3",

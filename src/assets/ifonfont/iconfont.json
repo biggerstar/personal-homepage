@@ -1,0 +1,65 @@
+{
+  "id": "4219464",
+  "name": "个人简历模板",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "5388013",
+      "name": "包裹_发货_o",
+      "font_class": "baoguo_fahuo_o",
+      "unicode": "ebb6",
+      "unicode_decimal": 60342
+    },
+    {
+      "icon_id": "8288808",
+      "name": "主页",
+      "font_class": "zhuye",
+      "unicode": "e83a",
+      "unicode_decimal": 59450
+    },
+    {
+      "icon_id": "4111811",
+      "name": "代码",
+      "font_class": "code",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "15726983",
+      "name": "预览",
+      "font_class": "yulan",
+      "unicode": "e65b",
+      "unicode_decimal": 58971
+    },
+    {
+      "icon_id": "579740",
+      "name": "用户-fill",
+      "font_class": "yonghufill",
+      "unicode": "e787",
+      "unicode_decimal": 59271
+    },
+    {
+      "icon_id": "836610",
+      "name": "github",
+      "font_class": "github",
+      "unicode": "e718",
+      "unicode_decimal": 59160
+    },
+    {
+      "icon_id": "4936984",
+      "name": "QQ",
+      "font_class": "QQ",
+      "unicode": "e882",
+      "unicode_decimal": 59522
+    },
+    {
+      "icon_id": "34453204",
+      "name": "email-fill",
+      "font_class": "email-fill",
+      "unicode": "e856",
+      "unicode_decimal": 59478
+    }
+  ]
+}

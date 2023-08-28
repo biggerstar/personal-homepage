@@ -68,6 +68,7 @@ export default defineViteRunConfig({
         extensions: ['.vue', '.css', '.js', '.ts'],
         alias: {
           '@': resolve(__dirname, 'src'),
+          // "@amap": resolve(__dirname, "node_modules/@amap/amap-jsapi-types")
         }
       }
     }

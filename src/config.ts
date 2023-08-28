@@ -1,4 +1,4 @@
-import {Avatar, Histogram, HomeFilled, Menu, Opportunity} from "@element-plus/icons-vue";
+import {Avatar, ChatSquare, Histogram, HomeFilled, Menu} from "@element-plus/icons-vue";
 
 export default {
   profile: {
@@ -23,7 +23,7 @@ export default {
         desc: '简介',
         color: '#d3ccd6'
       },
-      personInfoTitle: '个人信息',
+      personInfoTitle: '基本信息',
       personInfo: [
         {
           type: '名称',
@@ -50,7 +50,7 @@ export default {
           desc: '1458048116@qq.com'
         },
       ],
-      personDescTitle: '个人介绍',
+      personDescTitle: '简单介绍',
       desc: [
         '大家好，我是一名热爱编程的前端程序员。',
         '我有多年的编程经验，擅长多种编程语言和技术栈。',
@@ -352,12 +352,40 @@ export default {
 
       ],
     },
-    about: {
-      icon: Opportunity,
+    'contact-me': {
+      icon: ChatSquare,
       stick: {
-        desc: '关于',
-        color: '#ebe3c7'
+        desc: '联系我',
+        color: '#eae9e3'  // 可以设置成transparent透明
       },
+      contactMeDesc: {
+        title: '感谢您的浏览',
+        desc: '我一直在探索新事物,不断追求进步和提升，如果您也和我一样，我非常乐意与您交个朋友，期待您的来信'
+      },
+      contactMeFormTitle: '发送邮件',
+      contactMeFormBtn: '发送邮件',
+      administratorEmail: '1458048116@qq.com',
+      contactMeForm: {
+        username: {
+          placeholder: '输入您的名字'
+        },
+        subject: {
+          placeholder: '输入您的标题'
+        },
+        content: {
+          placeholder: '输入您要发送的邮件内容'
+        },
+      },
+      aMap: { // 高德地图，删除该aMap字段将不会加载地图,没有key的娃子可以使用localPos
+        localPos: true, // 是否直接加载 defaultLocation 的坐标
+        defaultLocation: [118.176763, 24.48436], // 接口如果加载失败默认显示的高德地图坐标，请注意，gps坐标可能不适用高德经过算法偏移之后的坐标
+        // style: "light"  // 高德主题  see :https://lbs.amap.com/demo/javascript-api-v2/example/personalized-map/set-theme-style
+        //------------------ 下面配置是为了支持远程直接搜索获取经纬度的，可以不使用--------------------------------//
+        key: 'bcc767751fca1aca2fde2d9e73f3c1aaa',   // key 裸奔中..., 如果设置了defaultLocation后key可以随便设置
+        // securityKey: 'dc298ae34cda722da1ac80e023157b',   // 高德安全密钥,必须和key一起配合使用
+        city: '厦门',
+        address: '软件园生活广场',
+      }
     },
   }
 }

@@ -11,11 +11,15 @@ const props = defineProps({
     default: '#FFF'
   },
   opacity: {
-    type: Number,
+    type: [Number, String],
     default: 0.7
   },
+  fontSize: {
+    type: String,
+    default: '2rem'
+  }
 })
-const {color: bgColor, opacity: opacityNum} = props
+const {color: bgColor, opacity: opacityNum, fontSize} = props
 
 
 </script>
@@ -30,13 +34,13 @@ const {color: bgColor, opacity: opacityNum} = props
   $offset: 12px; // 偏移左顶角
 
   width: $w;
-  top: 0 + $offset;
+  top: 10 + $offset;
   letter-spacing: 0.6rem;
   left: -$w *  math.cos(45) + $h + $offset;
   text-align: center;
   position: absolute;
   display: inline-block;
-  font-size: 2rem;
+  font-size: v-bind(fontSize);
   font-weight: bolder;
   transform: rotate(-45deg);
   text-align-last: center;
