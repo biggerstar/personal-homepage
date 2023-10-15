@@ -20,7 +20,7 @@ export default {
     introduction: {
       icon: Avatar,
       stick: {
-        desc: '简介',
+        desc: '简 介',
         color: '#d3ccd6'
       },
       personInfoTitle: '基本信息',
@@ -43,7 +43,7 @@ export default {
         },
         {
           type: '电话',
-          desc: '1515***9885'
+          desc: '151***9885'
         },
         {
           type: '邮箱',
@@ -77,7 +77,7 @@ export default {
     skill: {
       icon: Histogram,
       stick: {
-        desc: '技能',
+        desc: '技 能',
         color: '#dcd1be'
       },
       /* 前端技能分布模块配置 */
@@ -97,12 +97,12 @@ export default {
         },
         y: {
           data: [
-            {value: 90, skill: 'Javascript'},
-            {value: 76, skill: 'Node.js'},
+            {value: 83, skill: 'Javascript'},
+            {value: 72, skill: 'Node.js'},
             {value: 76, skill: 'TypeScript'},
-            {value: 74, skill: 'Vue2/Vue3'},
+            {value: 75, skill: 'Vue2/Vue3'},
             {value: 70, skill: 'Vite/Rollup'},
-            {value: 68, skill: 'Sass/Less/Css3'},
+            {value: 68, skill: 'Sass/Css3'},
             {value: 60, skill: 'Element-plus/Antd'},
             // {value: 56, skill: 'Express'},
           ]
@@ -182,8 +182,10 @@ export default {
     },
     project: {
       icon: Menu,
+      editingMode: false,  // 是否开启即时编辑md文档的模式
+      editingIndex: 6,    // 正在编辑的projectItems文章索引
       stick: {
-        desc: '项目',
+        desc: '项 目',
         color: '#B8CCE3'
       },
       projectItemsTitle: '项目展示',
@@ -215,7 +217,7 @@ export default {
           title: 'vite-run',
           type: '效率工具',
           image: '/big-images/vite-run.png',
-          desc: 'Vite 多配置运行支持',
+          desc: 'Vite monorepo模式多配置运行支持',
           detail: {
             title: 'vite-run',
             md: '/md/vite-run.md',

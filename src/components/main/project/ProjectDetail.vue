@@ -9,7 +9,7 @@
         <span>{{ item.alias }}</span>
         <span>:</span>
         <span v-if="item.link">
-          <el-link :href="item.link" type="primary">
+          <el-link :href="item.link" target="_blank" type="primary">
             {{ item.value }}
           </el-link>
         </span>

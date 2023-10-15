@@ -43,9 +43,9 @@ const useConfig = inject('useConfig')
 const pageConfig = useConfig.page?.project
 const stickInfo = pageConfig.stick
 const {projectItems} = pageConfig
-const dialogTableVisible = ref(false)
+const dialogTableVisible = ref(pageConfig.editingMode)
 const dialogRef = ref()
-let curShowDetail = ref(projectItems[0].detail)
+let curShowDetail = ref(projectItems[pageConfig.editingIndex].detail)
 
 function itemClick(item) {
   curShowDetail.value = item.detail
@@ -55,9 +55,9 @@ function itemClick(item) {
 onMounted(() => {
   gsap.from('.project-item', {
     x: 100,
-    opacity:0,
-    duration:1,
-    stagger:0.08
+    opacity: 0,
+    duration: 1,
+    stagger: 0.08
   })
 })
 

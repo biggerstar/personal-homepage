@@ -29,22 +29,22 @@ const {color: bgColor, opacity: opacityNum, fontSize} = props
 // TODO 后面再设计成通用组件，当前可以外部在组件上使用class重定义样式
 
 .fix-tag {
-  $w: 300px;
+  $w: 200px;
   $h: 50px;
-  $offset: 12px; // 偏移左顶角
-
+  $offset: 42px ; // 偏移左上顶角
   width: $w;
-  top: 10 + $offset;
-  letter-spacing: 0.6rem;
-  left: -$w *  math.cos(45) + $h + $offset;
+  height: $h;
+  top: $offset - $h / 2;
+  left: $offset - $w / 2;
   text-align: center;
   position: absolute;
   display: inline-block;
   font-size: v-bind(fontSize);
   font-weight: bolder;
+  transform-origin: center center;
   transform: rotate(-45deg);
   text-align-last: center;
-  padding: 3px 0;
+  padding: 3px;
   opacity: v-bind(opacityNum);
   background: v-bind(bgColor);
   color: rgba(72, 70, 70);

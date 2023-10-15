@@ -7,68 +7,68 @@ import ElementPlus from 'unplugin-element-plus/vite'
 import bundleAnalyzer from 'rollup-plugin-bundle-analyzer'
 import {defineViteRunConfig, viteRunLogPlugin} from 'vite-run'
 
-
-export default defineViteRunConfig({
-  packages: [
-    './'
-  ],
-  targets: {
-    'personal-homepage': {
-      dev: ['10000'],
-      build: ['build'],
-      preview: ['p10000'],
-      size: [
-        ['build', 'bundleAnalyzer']
+export default defineViteRunConfig(() => {
+  return {
+    packages: [
+      './'
+    ],
+    targets: {
+      'personal-homepage': {
+        dev: ['10000'],
+        build: ['build'],
+        preview: ['p10000'],
+        size: [
+          ['build', 'bundleAnalyzer']
+        ]
+      }
+    },
+    plugins: {
+      bundleAnalyzer: [
+        bundleAnalyzer({})
       ]
-    }
-  },
-  plugins: {
-    bundleAnalyzer: [
-      bundleAnalyzer({})
-    ]
-  },
-  server: {
-    10000: {
-      port: 10000
-    }
-  },
-  build: {
-    build: {}
-  },
-  preview: {
-    p10000: {
-      port: 10000
-    }
-  },
-  baseConfig() {
-    return {
-      plugins: [
-        vue(),
-        viteRunLogPlugin({
-          build: {
-            viteLog: {
-              transforming: true
+    },
+    server: {
+      10000: {
+        port: 10000
+      }
+    },
+    build: {
+      build: {}
+    },
+    preview: {
+      p10000: {
+        port: 10000
+      }
+    },
+    baseConfig() {
+      return {
+        plugins: [
+          vue(),
+          viteRunLogPlugin({
+            build: {
+              viteLog: {
+                transforming: true
+              },
             },
-          },
-          server: {
-            viteLog: {
-              transforming: true
-            },
+            server: {
+              viteLog: {
+                transforming: true
+              },
+            }
+          }),
+          ElementPlus(),
+          AutoImport({
+            resolvers: [ElementPlusResolver()],
+          }),
+          Components({
+            resolvers: [ElementPlusResolver()],
+          }),
+        ],
+        resolve: {
+          extensions: ['.vue', '.css', '.js', '.ts'],
+          alias: {
+            '@': resolve(__dirname, 'src'),
           }
-        }),
-        ElementPlus(),
-        AutoImport({
-          resolvers: [ElementPlusResolver()],
-        }),
-        Components({
-          resolvers: [ElementPlusResolver()],
-        }),
-      ],
-      resolve: {
-        extensions: ['.vue', '.css', '.js', '.ts'],
-        alias: {
-          '@': resolve(__dirname, 'src'),
-          // "@amap": resolve(__dirname, "node_modules/@amap/amap-jsapi-types")
         }
       }
     }

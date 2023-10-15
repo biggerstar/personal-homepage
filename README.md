@@ -7,8 +7,11 @@
 ### 介绍
 
 模板里面所有可以看见的文字,数据，图标
-都可以通过`config.ts`配置文件进行配置，
+都可以通过`config.ts`配置文件进行配置,无需改动源码
 项目详情页可以配置md文档进行加载，支持高亮代码块
+
+参考配置信息查看 [config.js](https://github.com/biggerstar/personal-homepage/blob/main/src/config.ts)
+
 
 ### 以下是页面展示示例
 

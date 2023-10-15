@@ -80,8 +80,8 @@ devDependencies:
     specifier: ^4.4.5
     version: 4.4.5(@types/node@20.5.1)(sass@1.66.1)
   vite-run:
-    specifier: ^1.0.1
-    version: 1.0.1
+    specifier: ^1.2.6
+    version: 1.2.6
   vue-tsc:
     specifier: ^1.8.5
     version: 1.8.5(typescript@5.0.2)
@@ -950,7 +950,7 @@ packages:
     hasBin: true
     dependencies:
       foreground-child: 3.1.1
-      jackspeak: 2.3.0
+      jackspeak: 2.3.1
       minimatch: 9.0.3
       minipass: 7.0.3
       path-scurry: 1.10.1
@@ -1032,8 +1032,8 @@ packages:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
     dev: true
 
-  /jackspeak@2.3.0:
-    resolution: {integrity: sha512-uKmsITSsF4rUWQHzqaRUuyAir3fZfW3f202Ee34lz/gZCi970CPZwyQXLGNgWJvvZbvFyzeyGq0+4fcG/mBKZg==}
+  /jackspeak@2.3.1:
+    resolution: {integrity: sha512-4iSY3Bh1Htv+kLhiiZunUhQ+OYXIn0ze3ulq8JeWrFKmhPAJSySV2+kdtRh2pGcCeF0s6oR8Oc+pYZynJj4t8A==}
     engines: {node: '>=14'}
     dependencies:
       '@isaacs/cliui': 8.0.2
@@ -1555,8 +1555,8 @@ packages:
       webpack-virtual-modules: 0.5.0
     dev: true
 
-  /vite-run@1.0.1:
-    resolution: {integrity: sha512-Htte23g5S58/ejycWyRwfNIaMtCT2rfYW39obyy7Y3jY37cyW4X83J0dqB9KqX4S5EygZ/nt7gtkM1JhtgRmhQ==}
+  /vite-run@1.2.6:
+    resolution: {integrity: sha512-1Pc3Q3IYegXLIH9c5eLo1nWeGmdvPHAb3JM7zmYqDbF4MrPqU6eMoWOu/1PR4x+Vnldi6eA/E+nMHyDjig0TyQ==}
     hasBin: true
     dependencies:
       commander: 11.0.0
