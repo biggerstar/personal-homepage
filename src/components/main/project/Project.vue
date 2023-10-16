@@ -73,7 +73,7 @@ onMounted(() => {
 .project-box {
   width: 100%;
   height: auto;
-  padding: 10% 8% 0 8%;
+  padding: 13% 6% 0 10%;
   margin: auto;
 }
 
@@ -86,10 +86,8 @@ onMounted(() => {
   display: flex;
   width: 100%;
   height: 100%;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
-  //margin: 120px auto;
-  margin-top: 20px;
   padding-bottom: 100px;
 
   .project-item {

@@ -37,6 +37,7 @@ onMounted(() => {
       duration: 1,
     }, '>-0.5')
 
+  document.getElementById('el-main').style.height = '100%'
 })
 
 </script>

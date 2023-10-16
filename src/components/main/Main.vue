@@ -1,6 +1,7 @@
 <template>
   <div class="main-outer-container">
     <el-scrollbar
+      style="overflow-y: clip;"
       :noresize=true
     >
       <router-view></router-view>
@@ -15,7 +16,6 @@
 .main-outer-container {
   height: 100%;
   width: 100%;
-  border-radius: 45px;
   overflow: hidden;
   background-color: #f6f7fa;
 

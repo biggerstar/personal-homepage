@@ -2,7 +2,7 @@
   <div class="navigation-card-container">
     <router-link
       v-for="(item,barName) in allBar"
-      @click="routerLinkClick(barName)"
+      @click="routerLinkClick(barName,$event)"
       class="navigation-item"
       :to="barName"
       :class="{'active-card':activeName === barName}"
@@ -18,7 +18,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import {inject, onMounted, ref} from "vue";
 import gsap from 'gsap'
 import {choiceAnimation, execAnimation} from "@/utils/common";
@@ -27,13 +27,26 @@ import {HelpFilled} from '@element-plus/icons-vue'
 const useConfig = inject('useConfig')
 const activeName = ref(location.pathname.replace('/', ''))
 
-
+const props = defineProps({
+  breakPx: {
+    type: String,
+    default: '769px'
+  },
+})
+const breakPx = props.breakPx
 const allBar = useConfig.page
 let animationRunning = false
 const mainContainerClass = '#el-main'
 const mainCloneContainerClass = '.el-main-clone-box'
 
-function routerLinkClick(barName) {
+const emits = defineEmits({
+  clickItem: String
+})
+
+function routerLinkClick(barName, ev: Event) {
+  emits('clickItem', barName)
+  let pathName = location.pathname.split('/').filter(Boolean)[0]
+  if (pathName === barName) return ev.preventDefault()
   if (animationRunning) return;  // 正在动画中或者已经在某个标签，阻止继续其创建动画
   if (activeName.value === barName) return;
   activeName.value = barName
@@ -58,32 +71,40 @@ onMounted(() => {
 </script>
 
 <style scoped lang="scss">
+$breakPx: v-bind(breakPx);
+
 .active-card {
   --color: #4e62ee;
   color: var(--color);
   font-weight: bold;
 }
 
+
 .navigation-card-container {
   display: flex;
   height: 100%;
-  flex-direction: column;
+  width: 100%;
   text-align: center;
+  align-items: center;
   align-content: space-evenly;
   overflow: hidden;
   border-radius: 20px;
 }
 
+// 断点位置，大于某个值切换成竖向排列，可以设置一个不可能到达的值保持横向排列
+@media screen and (min-width: 770px) {
+  .navigation-card-container {
+    flex-direction: column;
+  }
+}
+
 .navigation-item {
   --line-width: 3px;
-  flex: 1;
-  display: flex;
   color: white;
   width: 100%;
   height: 100%;
   font-size: 2.2rem;
   justify-content: center;
-  align-items: center;
   font-weight: bold;
   position: relative;
 

@@ -1,7 +1,23 @@
 <template>
   <div class="home-layout">
+    <div>
+      <div class="profiles-fixed-btn" v-if="!showAside" @click="showDrawer = !showDrawer">
+        <el-icon>
+          <CaretRight/>
+        </el-icon>
+      </div>
+      <el-drawer
+        v-model="showDrawer"
+        :show-close="false"
+        size="60%"
+        direction="ltr"
+        style="backdrop-filter: blur(3px);background: rgba(56,207,241,0.2);"
+      >
+        <Profiles/>
+      </el-drawer>
+    </div>
     <el-container class="el-main-container">
-      <el-aside width="20%" style="min-width: 180px">
+      <el-aside v-if="showAside" class="el-aside" width="20%" style="min-width: 180px">
         <Profiles/>
       </el-aside>
       <div class="background-name">{{ username }}</div>
@@ -11,7 +27,7 @@
     </el-container>
 
     <div class="navigation-card">
-      <NavigationCard/>
+      <NavigationCard @click-item="updateLayout"/>
     </div>
   </div>
 </template>
@@ -22,10 +38,37 @@ import Profiles from "@/components/profiles/Profiles.vue";
 import Main from "@/components/main/Main.vue";
 import NavigationCard from "@/components/navigation-card/NavigationCard.vue";
 import gsap from 'gsap'
-import {inject, onMounted} from "vue";
+import {inject, onMounted, onUnmounted, ref} from "vue";
+import {CaretRight} from '@element-plus/icons-vue'
 
+const showDrawer = ref(false)
+const showAside = ref(false)
 const useConfig = inject('useConfig')
 const username = useConfig.profile.username
+let resizeOb = new ResizeObserver(() => {
+  showAside.value = window.innerWidth >= 769
+})
+
+const updateLayout = (pathName?) => {
+  const elMain = document.getElementById('el-main')
+  const btn = document.querySelector<HTMLElement>('.profiles-fixed-btn')
+  if (!pathName) pathName = location.pathname.split('/').filter(Boolean)[0]
+  // console.log(pathName)
+  if (pathName === 'welcome') {
+    elMain.style.height = '100%'
+    if (btn) {
+      btn.style.backgroundColor = 'transparent'
+      btn.style.color = 'transparent'
+    }
+  } else {
+    elMain.style.height = 'calc(100% - 60px)'
+    if (btn) {
+      btn.style.backgroundColor = '#56D0C4'
+      btn.style.color = '#000'
+    }
+  }
+}
+
 
 onMounted(() => {
   gsap.from('#el-main', {
@@ -33,10 +76,66 @@ onMounted(() => {
     duration: 0.6,
     ease: 'back.out'
   })
+  resizeOb.observe(window.document.body)
+  updateLayout()
 })
+
+onUnmounted(() => {
+  resizeOb.disconnect()
+})
+
 </script>
 
 <style scoped>
+.navigation-card {
+  position: fixed;
+  text-align: center;
+  height: var(--navigation-card);
+  width: 100%;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.el-aside {
+  position: fixed;
+}
+
+#el-main {
+  width: 100%;
+  height: var(--el-main-height);
+  position: relative;
+  min-width: 375px;
+  z-index: 10;
+}
+
+/* 大屏*/
+@media screen and (min-width: 769px) {
+  .el-aside {
+    position: unset;
+  }
+
+  #el-main {
+    margin: 3% 8% 3% 0;
+    width: 100%;
+    height: 100% !important;
+    position: relative;
+    min-width: 375px;
+    border-radius: 45px;
+    z-index: 10;
+  }
+
+  .navigation-card {
+    --height: 50%;
+    width: 5%;
+    height: var(--height);
+    right: 0;
+    top: calc(50% - var(--height) / 2);
+    z-index: 1000;
+  }
+}
+
 .home-layout {
   width: 100vw;
   height: 100vh;
@@ -58,30 +157,24 @@ onMounted(() => {
   transform: rotate(-30deg);
 }
 
-.navigation-card {
-  --height: 50%;
-  width: 6%;
-  text-align: center;
-  height: var(--height);
-  position: fixed;
-  right: 0;
-  top: calc(50% - var(--height) / 2);
-}
 
 .el-main-container {
   height: 100vh;
   position: relative;
 }
 
-#el-main {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  min-width: 375px;
-  z-index: 10;
+.profiles-fixed-btn {
+  position: fixed;
+  width: 32px;
+  height: 50px;
+  line-height: 50px;
+  bottom: 70px;
+  color: transparent;
+  left: 0;
+  z-index: 100;
+  font-size: 2rem;
+  text-align: center;
+  border-radius: 0 10px 10px 0;
 }
 
-.el-main {
-  margin: 3% 8% 3% 0;
-}
 </style>

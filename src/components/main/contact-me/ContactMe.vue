@@ -64,7 +64,7 @@
 </template>
 
 <script setup lang="ts">
-import {inject, onMounted, reactive, ref} from 'vue'
+import {inject, onMounted, onUnmounted, reactive, ref} from 'vue'
 import FixedStick from "@/components/common/FixedStick.vue";
 import {Postcard, Promotion, User} from '@element-plus/icons-vue'
 import {ElMessage, FormInstance} from "element-plus";
@@ -176,6 +176,7 @@ async function createMapWindow(AMap) {
     city: aMapConfig.city
   }
   map = new Map('map-container');
+  console.log(map)
   if (aMapConfig.localPos) loadPosToMap()  // 指定了使用本地坐标则直接加载
   else {
     // 否则网络搜索坐标
@@ -214,9 +215,11 @@ function createMapLoader() {
     .catch((e) => {
       console.error(e);
     });
-
 }
 
+onUnmounted(()=>{
+  map.destroy()
+})
 
 </script>
 

@@ -29,7 +29,8 @@ export default defineViteRunConfig(() => {
     },
     server: {
       10000: {
-        port: 10000
+        port: 10000,
+        host: true
       }
     },
     build: {

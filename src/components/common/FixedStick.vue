@@ -17,9 +17,21 @@ const props = defineProps({
   fontSize: {
     type: String,
     default: '2rem'
-  }
+  },
+  width: {
+    type: String,
+    default: '13rem'
+  },
+  height: {
+    type: String,
+    default: '3rem'
+  },
+  offset: {
+    type: String,
+    default: '3rem'
+  },
 })
-const {color: bgColor, opacity: opacityNum, fontSize} = props
+const {color: bgColor, opacity: opacityNum, fontSize, width, offset} = props
 
 
 </script>
@@ -29,13 +41,13 @@ const {color: bgColor, opacity: opacityNum, fontSize} = props
 // TODO 后面再设计成通用组件，当前可以外部在组件上使用class重定义样式
 
 .fix-tag {
-  $w: 200px;
-  $h: 50px;
-  $offset: 42px ; // 偏移左上顶角
+  $w: v-bind(width);
+  $h: v-bind(height);
+  $offset: v-bind(offset); // 偏移左上顶角
   width: $w;
   height: $h;
-  top: $offset - $h / 2;
-  left: $offset - $w / 2;
+  top: calc($offset - calc($h / 2));
+  left: calc($offset - calc($w / 2));
   text-align: center;
   position: absolute;
   display: inline-block;
@@ -44,7 +56,6 @@ const {color: bgColor, opacity: opacityNum, fontSize} = props
   transform-origin: center center;
   transform: rotate(-45deg);
   text-align-last: center;
-  padding: 3px;
   opacity: v-bind(opacityNum);
   background: v-bind(bgColor);
   color: rgba(72, 70, 70);

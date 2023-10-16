@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {inject, onUnmounted, ref} from "vue";
+import {inject, onMounted, onUnmounted, ref} from "vue";
 import {use} from "echarts/core";
 import throttle from 'lodash/throttle'
 import FixedStick from "@/components/common/FixedStick.vue";
@@ -162,9 +162,23 @@ const learnActiveName = ref(pageConfig.skillLearningActiveTagName || Object.keys
 <style scoped lang="scss">
 
 .skill-box {
-  width: 88%;
+  width: 96%;
   height: auto;
-  padding: 10% 6%;
+  padding: 10% 2%;
+  margin: auto;
+  :deep(.el-tabs__item){
+    padding: 6px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .skill-box {
+    width: 88%;
+    padding: 10% 4%;
+    :deep(.el-tabs__item){
+      padding: 20px;
+    }
+  }
 }
 
 .frontend-skill-charts {

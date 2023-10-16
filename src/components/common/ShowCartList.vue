@@ -30,7 +30,7 @@ const items = props.items
 
 <style scoped lang="scss">
 
-$card-width: 250px;
+$card-width: 200px;
 
 .progress .el-progress--line {
   margin-bottom: 15px;
@@ -53,7 +53,7 @@ $card-width: 250px;
   justify-content: space-between;
   flex-wrap: wrap;
   height: 100px;
-  width: $card-width;
+  width: 16rem;
   min-width: $card-width;
   border-radius: 15px;
   background-color: white;
