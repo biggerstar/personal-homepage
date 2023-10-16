@@ -2,7 +2,7 @@ import {Avatar, ChatSquare, Histogram, HomeFilled, Menu} from "@element-plus/ico
 
 export default {
   profile: {
-    avatarUrl: '/images/biggerstar.png',
+    avatarUrl: './images/biggerstar.png',
     username: 'Biggerstar',
     occupation: '前端工程师',
     contactMe: {
@@ -116,22 +116,22 @@ export default {
           label: 'Backend',
           items: [
             {
-              icon: 'images/expressjs.svg',
+              icon: './images/expressjs.svg',
               title: 'Express.js',
               desc: 'Node.js后端web服务框架',
             },
             {
-              icon: 'images/mysql.svg',
+              icon: './images/mysql.svg',
               title: 'MySQL',
               desc: '关系型数据库管理系统',
             },
             {
-              icon: 'images/django.svg',
+              icon: './images/django.svg',
               title: 'Django',
               desc: 'Python后端web服务框架',
             },
             {
-              icon: 'images/mongoDB.svg',
+              icon: './images/mongoDB.svg',
               title: 'mongoDB',
               desc: 'NoSQL数据库',
             },
@@ -141,17 +141,17 @@ export default {
           label: 'Other',
           items: [
             {
-              icon: 'images/github.svg',
+              icon: './images/github.svg',
               title: 'Git',
               desc: '代码管理',
             },
             {
-              icon: 'images/scrapy.png',
+              icon: './images/scrapy.png',
               title: 'Scrapy',
               desc: 'Python爬虫框架',
             },
             {
-              icon: 'images/selenium.svg',
+              icon: './images/selenium.svg',
               title: 'Selenium',
               desc: 'Python自动化测试框架',
             },
@@ -167,12 +167,12 @@ export default {
           label: 'Learning',
           items: [
             {
-              icon: 'images/react.svg',
+              icon: './images/react.svg',
               title: 'React.js',
               desc: '流行前端web框架',
             },
             {
-              icon: 'images/vitest.svg',
+              icon: './images/vitest.svg',
               title: 'Vitest',
               desc: 'Vite提供支持的极速单元测试框架',
             },
@@ -193,11 +193,11 @@ export default {
         {
           title: 'Personal-homepage',
           type: '个人主页模板',
-          image: '/big-images/personal-homepage.png',
+          image: './big-images/personal-homepage.png',
           desc: '一款基于Vue3的个人主页模板',
           detail: {
             title: 'Personal-homepage',
-            md: '/md/personal-homepage.md',
+            md: './md/personal-homepage.md',
             baseInfo: {
               git: {
                 icon: 'icon-github',
@@ -216,11 +216,11 @@ export default {
         {
           title: 'vite-run',
           type: '效率工具',
-          image: '/big-images/vite-run.png',
+          image: './big-images/vite-run.png',
           desc: 'Vite monorepo模式多配置运行支持',
           detail: {
             title: 'vite-run',
-            md: '/md/vite-run.md',
+            md: './md/vite-run.md',
             baseInfo: {
               git: {
                 icon: 'icon-github',
@@ -239,11 +239,11 @@ export default {
         {
           type: '效率工具',
           title: '',
-          image: '/big-images/any-grid-layout.png',
+          image: './big-images/any-grid-layout.png',
           desc: '一款快速网格布局的高性能前端库，支持跨容器拖动元素，无副作用调整大小，响应式布局，静态布局',
           detail: {
             title: 'any-grid-layout',
-            md: '/md/any-grid-layout.md',
+            md: './md/any-grid-layout.md',
             baseInfo: {
               git: {
                 icon: 'icon-github',
@@ -262,11 +262,11 @@ export default {
         {
           type: '效率工具',
           title: '',
-          image: '/big-images/TiYi.js.png',
+          image: './big-images/TiYi.js.png',
           desc: '浏览器记录栈的映射管理控制与功能拓展,支持监听浏览器前进后退',
           detail: {
             title: 'TiYi.js',
-            md: '/md/TiYi.js.md',
+            md: './md/TiYi.js.md',
             baseInfo: {
               git: {
                 icon: 'icon-github',
@@ -284,12 +284,12 @@ export default {
         },
         {
           type: 'Vite打包插件',
-          image: '/big-images/vite-plugin-copy-dts.png',
+          image: './big-images/vite-plugin-copy-dts.png',
           title: ' ',
           desc: '合并「 declare module 」和「 declare global 」ts类型定义到目标dts声明文件中',
           detail: {
             title: 'vite-plugin-copy-dts',
-            md: '/md/vite-plugin-copy-dts.md',
+            md: './md/vite-plugin-copy-dts.md',
             baseInfo: {
               git: {
                 icon: 'icon-github',
@@ -307,12 +307,12 @@ export default {
         },
         {
           type: '爬虫框架',
-          image: '/big-images/ESpider.png',
+          image: './big-images/ESpider.png',
           title: '',
           desc: '一款node端高并发爬虫框架，支持队列,调度，数据管道，中间件，api简单易用',
           detail: {
             title: 'ESpider',
-            md: '/md/ESpider.md',
+            md: './md/ESpider.md',
             baseInfo: {
               git: {
                 icon: 'icon-github',
@@ -330,12 +330,12 @@ export default {
         },
         {
           type: '工具',
-          image: '/big-images/history-stack-manager.png',
+          image: './big-images/history-stack-manager.png',
           title: '',
           desc: '浏览器记录栈的映射管理控制与功能拓展,支持监听浏览器前进后退',
           detail: {
             title: 'History-stack-manager',
-            md: '/md/history-stack-manager.md',
+            md: './md/history-stack-manager.md',
             baseInfo: {
               git: {
                 icon: 'icon-github',

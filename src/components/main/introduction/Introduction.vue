@@ -69,7 +69,7 @@ onMounted(() => {
     .from('.person-tags-info', {
       x: 50,
     }, '<')
- })
+})
 
 </script>
 
@@ -80,7 +80,7 @@ onMounted(() => {
   margin: auto;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 10% 8%;
+  padding: 10% 10%;
   width: 80%;
   height: 84%;
 }
@@ -97,8 +97,8 @@ onMounted(() => {
 }
 
 .person-base-info-box {
-  min-width: 360px;
-  width: 45%;
+  min-width: 400px;
+  width: 40%;
 }
 
 .person-tags-info {

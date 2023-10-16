@@ -217,15 +217,15 @@ function createMapLoader() {
     });
 }
 
-onUnmounted(()=>{
-  map.destroy()
+onUnmounted(() => {
+  if (map) map.destroy?.()
 })
 
 </script>
 
 <style scoped lang="scss">
 #map-container {
-  height: 600px;
+  height: 500px;
   width: 100%;
 }
 

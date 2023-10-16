@@ -19,27 +19,27 @@ li,p,a{
 
 - 欢迎页
 
-  ![welcome](./docs/images/welcome.png)
+  ![welcome](./images/homepage/welcome.png)
 
 - 介绍页
 
-  ![introduction](./docs/images/introduction.png)
+  ![introduction](./images/homepage/introduction.png)
 
 - 技能页
 
-  ![skill](./docs/images/skill.png)
+  ![skill](./images/homepage/skill.png)
 
 - 项目页
 
-  ![project](./docs/images/project.png)
+  ![project](./images/homepage/project.png)
 
 - 项目详情文章页(支持加载md文档)
 
-  ![skill](./docs/images/project-detail.png)
+  ![skill](./images/homepage/project-detail.png)
 
 - 联系站长页
 
-  ![contact-me](./docs/images/contact-me.png)
+  ![contact-me](./images/homepage/contact-me.png)
 
 <style>
 img{

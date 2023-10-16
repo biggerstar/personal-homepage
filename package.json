@@ -7,7 +7,9 @@
     "dev": "vite-run dev",
     "preview": "vite-run build && vite-run preview",
     "build": " vite-run build",
-    "size": "vite-run size"
+    "build:git": " vite-run buildGit",
+    "size": "vite-run size",
+    "deploy": "bash scripts/deploy-docs.sh"
   },
   "dependencies": {
     "@amap/amap-jsapi-loader": "^1.0.1",

@@ -50,7 +50,7 @@ p {
 
 .welcome-box {
   display: flex;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   justify-content: center;
   align-items: center;

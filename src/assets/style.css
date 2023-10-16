@@ -70,10 +70,6 @@ button:focus-visible {
   padding: 2em;
 }
 
-#app {
-  margin: 0 auto;
-}
-
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -167,16 +163,18 @@ button:focus-visible {
   }
 }
 
-body{
+body, #app {
   overflow: hidden;
   min-width: 100vw;
+  max-width: 100vw;
   min-height: 100vh;
+  max-height: 100vh;
 }
 
-:root{
-  --navigation-card:60px;
+:root {
+  --navigation-card: 60px;
   --el-main-height: 94%;
   --navigation-card-color: transparent;
-  --profiles-fixed-btn-background:transparent;
-  --profiles-fixed-btn-color:transparent;
+  --profiles-fixed-btn-background: transparent;
+  --profiles-fixed-btn-color: transparent;
 }

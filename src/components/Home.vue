@@ -54,6 +54,7 @@ const updateLayout = (pathName?) => {
   const btn = document.querySelector<HTMLElement>('.profiles-fixed-btn')
   if (!pathName) pathName = location.pathname.split('/').filter(Boolean)[0]
   // console.log(pathName)
+  elMain.scrollTo(0, 0)
   if (pathName === 'welcome') {
     elMain.style.height = '100%'
     if (btn) {

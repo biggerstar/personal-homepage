@@ -14,7 +14,7 @@
 
 <style scoped lang="scss">
 .main-outer-container {
-  height: 100%;
+  min-height: 100%;
   width: 100%;
   overflow: hidden;
   background-color: #f6f7fa;
