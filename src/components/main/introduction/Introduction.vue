@@ -82,11 +82,11 @@ onMounted(() => {
   justify-content: space-between;
   padding: 10% 10%;
   width: 80%;
-  height: 84%;
+  height: 80%;
 }
 
 .person-desc {
-  width: 90%;
+  width: 100%;
   font-weight: 500;
   font-size: 1.2rem;
   letter-spacing: 2px;
@@ -97,8 +97,8 @@ onMounted(() => {
 }
 
 .person-base-info-box {
-  min-width: 400px;
-  width: 40%;
+  min-width: 40%;
+  overflow: hidden;
 }
 
 .person-tags-info {
@@ -122,6 +122,7 @@ onMounted(() => {
   font-weight: bolder;
   padding: 8px 2px;
   letter-spacing: 2px;
+  min-width: 320px;
 
   span {
     padding: 0 5px;

@@ -2,7 +2,6 @@
   <div class="navigation-card-container">
     <router-link
       v-for="(item,barName) in allBar"
-      @click="routerLinkClick(barName,$event)"
       class="navigation-item"
       :to="barName"
       :class="{'active-card':activeName === barName}"
@@ -21,8 +20,8 @@
 <script setup lang="ts">
 import {inject, onMounted, ref} from "vue";
 import gsap from 'gsap'
-import {choiceAnimation, execAnimation} from "@/utils/common";
 import {HelpFilled} from '@element-plus/icons-vue'
+import {useRouter} from "vue-router";
 
 const useConfig = inject('useConfig')
 const activeName = ref(location.pathname.replace('/', ''))
@@ -35,29 +34,22 @@ const props = defineProps({
 })
 const breakPx = props.breakPx
 const allBar = useConfig.page
-let animationRunning = false
-const mainContainerClass = '#el-main'
-const mainCloneContainerClass = '.el-main-clone-box'
+const router = useRouter()
+
+function toRouterName(path) {
+  return path.split('/').filter(Boolean)[0]
+}
 
 const emits = defineEmits({
-  clickItem: String
+  changeRouter: String
 })
 
-function routerLinkClick(barName, ev: Event) {
-  emits('clickItem', barName)
-  let pathName = location.pathname.split('/').filter(Boolean)[0]
-  if (pathName === barName) return ev.preventDefault()
-  if (animationRunning) return;  // 正在动画中或者已经在某个标签，阻止继续其创建动画
-  if (activeName.value === barName) return;
-  activeName.value = barName
-  animationRunning = true
-  //-----------------------------------------------------------------
-  let animation
-  animation = choiceAnimation()
-  execAnimation(animation, mainContainerClass, mainCloneContainerClass).then(() => {
-    animationRunning = false
-  })
-}
+router.afterEach((to) => {
+  const toName = toRouterName(to.path)
+  emits('changeRouter', toName)
+  if (activeName.value === toName) return
+  activeName.value = toName// 改变高亮按钮
+})
 
 onMounted(() => {
   gsap.from('.navigation-item', {

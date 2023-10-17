@@ -21,13 +21,14 @@
         <Profiles/>
       </el-aside>
       <div class="background-name">{{ username }}</div>
+
       <div class="el-main" id="el-main">
         <Main></Main>
       </div>
     </el-container>
 
     <div class="navigation-card">
-      <NavigationCard @click-item="updateLayout"/>
+      <NavigationCard @change-router="updateLayout"/>
     </div>
   </div>
 </template>
@@ -40,6 +41,7 @@ import NavigationCard from "@/components/navigation-card/NavigationCard.vue";
 import gsap from 'gsap'
 import {inject, onMounted, onUnmounted, ref} from "vue";
 import {CaretRight} from '@element-plus/icons-vue'
+import {choiceAnimation, execAnimation} from "@/utils/common";
 
 const showDrawer = ref(false)
 const showAside = ref(false)
@@ -48,6 +50,11 @@ const username = useConfig.profile.username
 let resizeOb = new ResizeObserver(() => {
   showAside.value = window.innerWidth >= 769
 })
+
+let animation
+let animationRunning = false
+const mainContainerClass = '#el-main'
+const mainCloneContainerClass = '.el-main-clone-box'
 
 const updateLayout = (pathName?) => {
   const elMain = document.getElementById('el-main')
@@ -68,6 +75,14 @@ const updateLayout = (pathName?) => {
       btn.style.color = '#000'
     }
   }
+
+  /*-----------------------------执行动画逻辑--------------------------------*/
+  if (animationRunning) return;  // 正在动画中或者已经在某个标签，阻止继续其创建动画
+  animationRunning = true
+  animation = choiceAnimation()
+  execAnimation(animation, mainContainerClass, mainCloneContainerClass).then(() => {
+    animationRunning = false
+  })
 }
 
 

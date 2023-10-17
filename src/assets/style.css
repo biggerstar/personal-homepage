@@ -163,7 +163,7 @@ button:focus-visible {
   }
 }
 
-body, #app {
+html, body, #app {
   overflow: hidden;
   min-width: 100vw;
   max-width: 100vw;
@@ -178,3 +178,11 @@ body, #app {
   --profiles-fixed-btn-background: transparent;
   --profiles-fixed-btn-color: transparent;
 }
+
+
+#nprogress .bar {
+  background-image: linear-gradient(0deg, #57d3c0, #47abfa, #acd4ff) !important;
+  height: 4px !important;
+  filter: contrast(1);
+}
+

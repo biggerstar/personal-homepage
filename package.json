@@ -22,12 +22,14 @@
     "lodash": "^4.17.21",
     "marked": "^7.0.5",
     "marked-highlight": "^2.0.4",
+    "nprogress": "^0.2.0",
     "prismjs": "^1.29.0",
     "vue": "^3.3.4",
     "vue-echarts": "^6.6.1",
     "vue-router": "^4.2.4"
   },
   "devDependencies": {
+    "@types/nprogress": "^0.2.1",
     "@types/gsap": "^3.0.0",
     "@types/node": "^20.5.1",
     "@vitejs/plugin-vue": "^4.2.3",

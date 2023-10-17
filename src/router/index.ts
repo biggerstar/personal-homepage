@@ -1,5 +1,6 @@
 import {createRouter, createWebHashHistory, RouteRecordRaw} from "vue-router";
-
+import NProgress from 'nprogress'
+import 'nprogress/nprogress.css'
 
 const routes: RouteRecordRaw[] = [
   {
@@ -35,6 +36,23 @@ const routes: RouteRecordRaw[] = [
 const router = createRouter({
   routes,
   history: createWebHashHistory()
+})
+
+NProgress.configure({
+  showSpinner: true,
+  easing: 'ease',
+  parent: '#el-main',
+  speed: 500
+})
+
+router.beforeEach((to, from, next: Function) => {  // 支持过程加载动画
+  NProgress.start()
+  NProgress.set(0.20)
+  next()
+})
+
+router.afterEach(() => {
+  NProgress.done()
 })
 
 export default router
