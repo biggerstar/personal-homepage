@@ -23,30 +23,6 @@ import gsap from "gsap";
  * D  dissolution 溶解效果
  * */
 
-export async function Clone_F_B__Base_F_T(classNameBaseOrEl: HTMLElement, classNameCloneOrEl: HTMLElement) {
-  return new Promise(resolve => {
-    gsap.timeline()
-      .fromTo(classNameCloneOrEl, {
-        ease: 'back.in',
-      }, {
-        scale: 0.8,
-      })
-      .fromTo(classNameCloneOrEl, {
-        ease: 'back.inOut',
-      }, {
-        y: '100%',
-        opacity: 0,
-      })
-      .from(classNameBaseOrEl, {
-        y: '100%',
-        opacity: 0,
-        zIndex: 1000,
-        onComplete() {
-          resolve()
-        }
-      }, '<')
-  })
-}
 
 export async function Clone_F_B__Base_F_B(classNameBaseOrEl: HTMLElement, classNameCloneOrEl: HTMLElement) {
   return new Promise(resolve => {
@@ -64,6 +40,31 @@ export async function Clone_F_B__Base_F_B(classNameBaseOrEl: HTMLElement, classN
       })
       .from(classNameBaseOrEl, {
         y: '-100%',
+        opacity: 0,
+        zIndex: 1000,
+        onComplete() {
+          resolve()
+        }
+      }, '<')
+  })
+}
+
+export async function Clone_F_B__Base_F_T(classNameBaseOrEl: HTMLElement, classNameCloneOrEl: HTMLElement) {
+  return new Promise(resolve => {
+    gsap.timeline()
+      .fromTo(classNameCloneOrEl, {
+        ease: 'back.in',
+      }, {
+        scale: 0.8,
+      })
+      .fromTo(classNameCloneOrEl, {
+        ease: 'back.inOut',
+      }, {
+        y: '100%',
+        opacity: 0,
+      })
+      .from(classNameBaseOrEl, {
+        y: '100%',
         opacity: 0,
         zIndex: 1000,
         onComplete() {
@@ -92,27 +93,27 @@ export async function Clone_F_SI_Base_F_SO(classNameBaseOrEl: HTMLElement, class
   })
 }
 
-export async function Clone_FO_F_T__Base_F_E_B(classNameBaseOrEl: HTMLElement, classNameCloneOrEl: HTMLElement) {
-  return new Promise(resolve => {
-    gsap.timeline()
-      .set(classNameBaseOrEl, {
-        opacity: 0
-      })
-      .to(classNameCloneOrEl, {
-        opacity: 0,
-        ease: 'back.out',
-        duration: 0.5,
-        height: 0
-      })
-      .from(classNameBaseOrEl, {
-        height: 0,
-        opacity: 1,
-        onComplete() {
-          resolve()
-        }
-      })
-  })
-}
+// export async function ZClone_FO_F_T__Base_F_E_B(classNameBaseOrEl: HTMLElement, classNameCloneOrEl: HTMLElement) {
+//   return new Promise(resolve => {
+//     gsap.timeline()
+//       .set(classNameBaseOrEl, {
+//         opacity: 0
+//       })
+//       .to(classNameCloneOrEl, {
+//         opacity: 0,
+//         ease: 'back.out',
+//         duration: 0.5,
+//         height: 0
+//       })
+//       .from(classNameBaseOrEl, {
+//         height: 0,
+//         opacity: 1,
+//         onComplete() {
+//           resolve()
+//         }
+//       })
+//   })
+// }
 
 
 export async function Clone_F_RY_SI__BASE_B_L(classNameBaseOrEl: HTMLElement, classNameCloneOrEl: HTMLElement) {

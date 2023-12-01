@@ -4,7 +4,7 @@
   </FixedStick>
   <div class="description background-img">
 
-    <div class="person-desc shadow-text-line">
+    <div class="person-desc ">
       <Title font-size="1.3rem" underline-bottom='#3498db'>
         {{pageConfig.personDescTitle}}
       </Title>
@@ -13,7 +13,7 @@
       </ul>
     </div>
 
-    <div class="person-base-info-box shadow-text-line">
+    <div class="person-base-info-box ">
       <Title font-size="1.3rem" underline-bottom='#3498db'>
         {{pageConfig.personInfoTitle}}
       </Title>

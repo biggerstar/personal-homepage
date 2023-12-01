@@ -103,7 +103,7 @@ export default {
             {value: 75, skill: 'Vue2/Vue3'},
             {value: 70, skill: 'Vite/Rollup'},
             {value: 68, skill: 'Sass/Css3'},
-            {value: 60, skill: 'Element-plus/Antd'},
+            {value: 60, skill: 'Element-plus/arco'},
             // {value: 56, skill: 'Express'},
           ]
         }
@@ -190,6 +190,24 @@ export default {
       },
       projectItemsTitle: '项目展示',
       projectItems: [
+        {
+          title: '在线设计平台',
+          type: '生产力工具',
+          image: './big-images/bilink-design.png',
+          desc: '仿稿定设计在线设计平台',
+          detail: {
+            title: '在线设计平台',
+            md: './md/bilink-design.md',
+            baseInfo: {
+              git: {
+                icon: 'icon-github',
+                alias: 'Git',
+                link: 'https://github.com/biggerstar/bilink-design',
+                value: '去看看'
+              },
+            }
+          },
+        },
         {
           title: 'Personal-homepage',
           type: '个人主页模板',

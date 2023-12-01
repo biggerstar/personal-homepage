@@ -176,7 +176,6 @@ async function createMapWindow(AMap) {
     city: aMapConfig.city
   }
   map = new Map('map-container');
-  console.log(map)
   if (aMapConfig.localPos) loadPosToMap()  // 指定了使用本地坐标则直接加载
   else {
     // 否则网络搜索坐标

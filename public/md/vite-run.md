@@ -47,10 +47,13 @@ vite 将合并 [额外的dts声明] 到指定的输出文件中，
 完整配置请见[viterun.config.ts](./viterun.config.ts)
 
 **dev**
-![dev](./images/dev.png)
-
+<br/>
+<img src="./images/homepage/dev.png" width ='80%'>
+<br/>
 **build**
-![build](./images/build.png)
+<br/>
+<img src="./images/homepage/build.png" width ='80%'>
+<br/>
 
 ## viterun.config [.js | .ts]
 
