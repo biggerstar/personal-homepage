@@ -53,6 +53,12 @@ const {item, icon} = props
   font-weight: bolder;
   transition: all .6s;
   flex: 1;
+
+  .item-img-box:hover .item-img {
+    transform: scaleX(1.05) scaleY(1.05) perspective(0);
+    filter: brightness(0.7);
+  }
+
   .item-img-box {
     $height: 220px;
     $width: 100%;
@@ -67,7 +73,7 @@ const {item, icon} = props
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
-      transition: .6s;
+      transition: all .6s;
       filter: brightness(0.98);
     }
 
@@ -83,11 +89,6 @@ const {item, icon} = props
       font-size: 4rem;
       font-weight: 900;
       color: white;
-    }
-
-    &:hover .item-img {
-      transform: scale(1.05);
-      filter: brightness(0.7);
     }
 
     &:hover .item-img-overlay {

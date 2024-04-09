@@ -104,6 +104,7 @@ export default {
             {value: 70, skill: 'Vite/Rollup'},
             {value: 68, skill: 'Sass/Css3'},
             {value: 60, skill: 'Element-plus/arco'},
+            {value: 58, skill: 'react'},
             // {value: 56, skill: 'Express'},
           ]
         }
@@ -166,11 +167,11 @@ export default {
         learning: {
           label: 'Learning',
           items: [
-            {
-              icon: './images/react.svg',
-              title: 'React.js',
-              desc: '流行前端web框架',
-            },
+            // {
+            //   icon: './images/react.svg',
+            //   title: 'React.js',
+            //   desc: '流行前端web框架',
+            // },
             {
               icon: './images/vitest.svg',
               title: 'Vitest',

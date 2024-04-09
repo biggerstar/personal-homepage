@@ -43,7 +43,7 @@ export async function Clone_F_B__Base_F_B(classNameBaseOrEl: HTMLElement, classN
         opacity: 0,
         zIndex: 1000,
         onComplete() {
-          resolve()
+          resolve(void 0)
         }
       }, '<')
   })
@@ -68,7 +68,7 @@ export async function Clone_F_B__Base_F_T(classNameBaseOrEl: HTMLElement, classN
         opacity: 0,
         zIndex: 1000,
         onComplete() {
-          resolve()
+          resolve(void 0)
         }
       }, '<')
   })
@@ -87,7 +87,7 @@ export async function Clone_F_SI_Base_F_SO(classNameBaseOrEl: HTMLElement, class
         opacity: 0,
         scale: 0.5,
         onComplete() {
-          resolve()
+          resolve(void 0)
         }
       })
   })
@@ -119,10 +119,10 @@ export async function Clone_F_SI_Base_F_SO(classNameBaseOrEl: HTMLElement, class
 export async function Clone_F_RY_SI__BASE_B_L(classNameBaseOrEl: HTMLElement, classNameCloneOrEl: HTMLElement) {
   return new Promise(resolve => {
     gsap.timeline()
-      .set(classNameCloneOrEl.parentNode, {
+      .set(classNameCloneOrEl, {
         perspective: 1000
       })
-      .set(classNameBaseOrEl.parentNode, {
+      .set(classNameBaseOrEl, {
         perspective: 1000,
       })
       .to(classNameCloneOrEl, {
@@ -138,7 +138,7 @@ export async function Clone_F_RY_SI__BASE_B_L(classNameBaseOrEl: HTMLElement, cl
       .from(classNameBaseOrEl, {
         x: '100%',
         onComplete() {
-          resolve()
+          resolve(void 0)
         }
       }, '<')
   })
@@ -148,10 +148,10 @@ export async function Clone_F_RY_SI__BASE_B_L(classNameBaseOrEl: HTMLElement, cl
 export async function Clone_F_RY_I_90__Base_F_RY_O_90(classNameBaseOrEl: HTMLElement, classNameCloneOrEl: HTMLElement) {
   return new Promise(resolve => {
     gsap.timeline()
-      .set(classNameCloneOrEl.parentNode, {
+      .set(classNameCloneOrEl, {
         perspective: 1000
       })
-      .set(classNameBaseOrEl.parentNode, {
+      .set(classNameBaseOrEl, {
         perspective: 1000,
       })
       .to(classNameCloneOrEl, {
@@ -168,7 +168,7 @@ export async function Clone_F_RY_I_90__Base_F_RY_O_90(classNameBaseOrEl: HTMLEle
         transformStyle: 'preserve-3d',
         transformOrigin: 'center center',
         onComplete() {
-          resolve()
+          resolve(void 0)
         }
       })
   })
@@ -177,7 +177,7 @@ export async function Clone_F_RY_I_90__Base_F_RY_O_90(classNameBaseOrEl: HTMLEle
 export async function Clone_F_RX_I_45__Base_B(classNameBaseOrEl: HTMLElement, classNameCloneOrEl: HTMLElement) {
   return new Promise(resolve => {
     gsap.timeline()
-      .set(classNameCloneOrEl.parentNode, {
+      .set(classNameCloneOrEl, {
         perspective: 1000
       })
       .to(classNameCloneOrEl, {
@@ -191,7 +191,7 @@ export async function Clone_F_RX_I_45__Base_B(classNameBaseOrEl: HTMLElement, cl
         zIndex: 1000,
         duration: 0.4,
         onComplete() {
-          resolve()
+          resolve(void 0)
         }
       }, '>-0.2')
       .to(classNameCloneOrEl, {
@@ -215,7 +215,7 @@ export async function Clone_D__Base_D(classNameBaseOrEl: HTMLElement, classNameC
         opacity: 0,
         filter: 'blur(12px)',
         onComplete() {
-          resolve(void 1)
+          resolve(void 0)
         }
       }, '>-0.6')
   })

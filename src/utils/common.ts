@@ -3,7 +3,7 @@ import * as allAnimation from './animation'
 /**
  * 创建一个类名为 cloneElClassName 的深度克隆元素节点
  * */
-export function createElMainCloneEl(cloneElClassName: string): HTMLElement {
+export function createElMainCloneEl(cloneElClassName: string): HTMLElement | void {
   if (!cloneElClassName) console.warn('创建克隆动画元素时未找到 cloneElClassName ')
   const elMainEl = document.getElementById('el-main')
   if (!elMainEl) return
@@ -27,22 +27,32 @@ export function createElMainCloneEl(cloneElClassName: string): HTMLElement {
  * animation.length 如果参数是一个，则不克隆目标节点，如果是两个，则克隆并添加到body上
  * */
 export async function execAnimation(animation: Function, classNameBaseOrEl: string | HTMLElement, classNameCloneOrEl: string | HTMLElement) {
-  if (typeof classNameBaseOrEl === 'string') classNameBaseOrEl = document.querySelector(classNameBaseOrEl)
+  if (typeof classNameBaseOrEl === 'string') classNameBaseOrEl = document.querySelector(classNameBaseOrEl) as HTMLElement
   if (!classNameBaseOrEl) return;
-  if (typeof classNameCloneOrEl === 'string') classNameCloneOrEl = createElMainCloneEl(classNameCloneOrEl)
+  if (typeof classNameCloneOrEl === 'string') classNameCloneOrEl = createElMainCloneEl(classNameCloneOrEl) as HTMLElement
   if (typeof animation !== 'function') return
   document.body.appendChild(<HTMLElement>classNameCloneOrEl);
+  // console.log(classNameBaseOrEl, classNameCloneOrEl)
   await animation.call(null, classNameBaseOrEl, classNameCloneOrEl);
-  classNameCloneOrEl.remove()
+  if (classNameBaseOrEl instanceof Element) {
+    classNameBaseOrEl.style.perspective = 'unset'
+  }
+  if (classNameCloneOrEl instanceof Element) {
+    classNameCloneOrEl.style.perspective = 'unset'
+    classNameCloneOrEl.style.width = '0'
+    classNameCloneOrEl.style.height = '0'
+    classNameCloneOrEl.remove()
+  }
 }
 
 /**
  * 随机选择一个动画名称
  * */
 export function choiceRandAnimation(): Function {
+  const allAnimationMap = allAnimation as any
   const keys = Object.keys(allAnimation)
   const index = Math.floor(Math.random() * keys.length)
-  return <Function> allAnimation[keys[index]]
+  return allAnimationMap[keys[index]] as Function
 }
 
 /**
