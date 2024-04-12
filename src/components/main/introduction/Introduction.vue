@@ -2,7 +2,7 @@
   <FixedStick v-if="stickInfo" :color="stickInfo.color">
     {{ stickInfo.desc }}
   </FixedStick>
-  <div class="description background-img">
+  <div class="description background-img" style="margin-bottom: 60px">
 
     <div class="person-desc ">
       <Title font-size="1.3rem" underline-bottom='#3498db'>
@@ -82,7 +82,6 @@ onMounted(() => {
   justify-content: space-between;
   padding: 10% 10%;
   width: 80%;
-  height: 80%;
 }
 
 .person-desc {

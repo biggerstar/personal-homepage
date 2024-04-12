@@ -104,7 +104,7 @@ export default {
             {value: 70, skill: 'Vite/Rollup'},
             {value: 68, skill: 'Sass/Css3'},
             {value: 60, skill: 'Element-plus/arco'},
-            {value: 58, skill: 'react'},
+            {value: 60, skill: 'react'},
             // {value: 56, skill: 'Express'},
           ]
         }

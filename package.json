@@ -6,10 +6,10 @@
   "scripts": {
     "dev": "vite-run dev",
     "preview": "vite-run build && vite-run preview",
-    "build": " vite-run build",
+    "build": "rimraf dist && vite-run build",
     "build:git": " vite-run buildGit",
     "size": "vite-run size",
-    "deploy": "node scripts/gh-pages.js"
+    "deploy": "rimraf dist && npm run build:git && node scripts/gh-pages.js"
   },
   "dependencies": {
     "@amap/amap-jsapi-loader": "^1.0.1",

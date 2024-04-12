@@ -103,15 +103,27 @@ button:focus-visible {
 }
 
 .el-dialog {
-  border-radius: 20px !important;
+  border-radius: 16px !important;
   width: 90vw !important;
   max-width: 1400px;
   min-width: 300px;
   overflow: hidden;
-  max-height: 80vh;
-  --el-dialog-margin-top: 10vh !important;
+  min-height: 95vh;
+  max-height: 95vh;
+  --el-dialog-margin-top: 5vh !important;
 }
 
+@media screen and (max-width: 768px) {
+  .el-dialog {
+    border-radius: 0 0 10px 10px !important;
+    width: 100vw !important;
+    min-width: 300px;
+    overflow: hidden;
+    min-height: 93.5vh;
+    max-height: 93.5vh;
+    --el-dialog-margin-top: 0vh !important;
+  }
+}
 
 /*---------------------------------------------------*/
 @media screen and (max-width: 768px) {
