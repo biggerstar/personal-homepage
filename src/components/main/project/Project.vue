@@ -6,20 +6,22 @@
     <div>
       <el-dialog
         v-model="dialogTableVisible"
-        :modal="false"
         :show-close="false"
         destroy-on-close
+        draggable
+        overflow
+        center
         append-to-body
         ref="dialogRef"
       >
-        <el-scrollbar style="height: 70vh; ">
+        <el-scrollbar style="height: 85vh; ">
           <ProjectDetail :detail="curShowDetail"/>
         </el-scrollbar>
       </el-dialog>
     </div>
     <div class="project-presentation">
       <Title underlineBottom font-size="1.5rem">
-        {{pageConfig.projectItemsTitle}}
+        {{ pageConfig.projectItemsTitle }}
       </Title>
       <div class="project-container">
         <a class="project-item" @click='itemClick(item)' v-for="(item,index) in projectItems" :key="index">

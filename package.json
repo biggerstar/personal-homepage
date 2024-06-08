@@ -6,10 +6,11 @@
   "scripts": {
     "dev": "vite-run dev",
     "preview": "vite-run build && vite-run preview",
-    "build": " vite-run build",
+    "build": "rimraf dist && vite-run build",
     "build:git": " vite-run buildGit",
     "size": "vite-run size",
-    "deploy": "node scripts/gh-pages.js"
+    "deploy": "rimraf dist && npm run build:git && node scripts/gh-pages.js",
+    "deploy:web": "cross-env NODE_ENV=prod && npm run build && NODE_ENV=prod node scripts/deploy_web.js"
   },
   "dependencies": {
     "@amap/amap-jsapi-loader": "^1.0.1",
@@ -18,7 +19,6 @@
     "clipboard": "^2.0.11",
     "echarts": "^5.4.3",
     "element-plus": "^2.3.9",
-    "gh-pages": "^6.1.1",
     "gsap": "^3.12.2",
     "lodash": "^4.17.21",
     "marked": "^7.0.5",
@@ -34,9 +34,14 @@
     "@types/node": "^20.5.1",
     "@types/nprogress": "^0.2.1",
     "@vitejs/plugin-vue": "^4.2.3",
+    "chalk": "^5.3.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.5",
+    "gh-pages": "^6.1.1",
     "rollup-plugin-bundle-analyzer": "^1.6.6",
     "sass": "^1.66.1",
     "typescript": "^5.0.2",
+    "node-scp": "^0.0.23",
     "unplugin-auto-import": "^0.16.6",
     "unplugin-element-plus": "^0.8.0",
     "unplugin-vue-components": "^0.25.1",
