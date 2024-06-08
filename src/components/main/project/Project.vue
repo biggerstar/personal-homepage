@@ -39,15 +39,15 @@ import RichCard from "@/components/common/RichCard.vue";
 import {Promotion} from "@element-plus/icons-vue";
 import ProjectDetail from "@/components/main/project/ProjectDetail.vue";
 
-const useConfig = inject('useConfig')
-const pageConfig = useConfig.page?.project
+const useConfig = inject('useConfig') as Record<any, any>
+const pageConfig: Record<any, any> = useConfig.page?.project || {}
 const stickInfo = pageConfig.stick
 const {projectItems} = pageConfig
 const dialogTableVisible = ref(pageConfig.editingMode)
 const dialogRef = ref()
 let curShowDetail = ref(projectItems[pageConfig.editingIndex].detail)
 
-function itemClick(item) {
+function itemClick(item: Record<any, any>) {
   curShowDetail.value = item.detail
   dialogTableVisible.value = !dialogTableVisible.value
 }

@@ -93,7 +93,7 @@ export default {
           },
         },
         x: {
-          category: ['小白', '了解', '熟悉', '掌握', '熟练', '精通']
+          category: ['小白', '熟悉', '掌握', '熟练', '精通', '神通']
         },
         y: {
           data: [
@@ -233,6 +233,29 @@ export default {
           },
         },
         {
+          title: 'wedecode',
+          type: '反编译工具',
+          image: './big-images/wedecode.png',
+          desc: 'wxapkg 小程序, 小游戏反编译工具',
+          detail: {
+            title: '',
+            md: './md/wedecode.md',
+            baseInfo: {
+              git: {
+                icon: 'icon-github',
+                alias: 'Git',
+                link: 'https://github.com/biggerstar/wedecode',
+                value: '去看看'
+              },
+              languages: {
+                icon: 'icon-code',
+                alias: '技术栈',
+                value: 'Typescript + Commander + Inquirer'
+              },
+            }
+          },
+        },
+        {
           title: 'vite-run',
           type: '效率工具',
           image: './big-images/vite-run.png',
@@ -347,29 +370,29 @@ export default {
             }
           },
         },
-        {
-          type: '工具',
-          image: './big-images/history-stack-manager.png',
-          title: '',
-          desc: '浏览器记录栈的映射管理控制与功能拓展,支持监听浏览器前进后退',
-          detail: {
-            title: 'History-stack-manager',
-            md: './md/history-stack-manager.md',
-            baseInfo: {
-              git: {
-                icon: 'icon-github',
-                alias: 'Git',
-                link: 'https://github.com/biggerstar/history-stack-manager',
-                value: '去看看'
-              },
-              languages: {
-                icon: 'icon-code',
-                alias: '语言',
-                value: 'TypeScript'
-              },
-            }
-          },
-        },
+        // {
+        //   type: '工具',
+        //   image: './big-images/history-stack-manager.png',
+        //   title: '',
+        //   desc: '浏览器记录栈的映射管理控制与功能拓展,支持监听浏览器前进后退',
+        //   detail: {
+        //     title: 'History-stack-manager',
+        //     md: './md/history-stack-manager.md',
+        //     baseInfo: {
+        //       git: {
+        //         icon: 'icon-github',
+        //         alias: 'Git',
+        //         link: 'https://github.com/biggerstar/history-stack-manager',
+        //         value: '去看看'
+        //       },
+        //       languages: {
+        //         icon: 'icon-code',
+        //         alias: '语言',
+        //         value: 'TypeScript'
+        //       },
+        //     }
+        //   },
+        // },
 
       ],
     },
