@@ -9,7 +9,8 @@
     "build": "rimraf dist && vite-run build",
     "build:git": " vite-run buildGit",
     "size": "vite-run size",
-    "deploy": "rimraf dist && npm run build:git && node scripts/gh-pages.js"
+    "deploy": "rimraf dist && npm run build:git && node scripts/gh-pages.js",
+    "deploy:web": "cross-env NODE_ENV=prod && npm run build && NODE_ENV=prod node scripts/deploy_web.js"
   },
   "dependencies": {
     "@amap/amap-jsapi-loader": "^1.0.1",
