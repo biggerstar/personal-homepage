@@ -19,6 +19,9 @@
       <Github :data='profilesInfo.contactMe.github'/>
       <QQ :data='profilesInfo.contactMe.qq'/>
     </div>
+    <div class="beian">
+      <a style="color: white" href="https://beian.miit.gov.cn/" target="_blank">闽ICP备2023018015号-1</a>
+    </div>
   </div>
 </template>
 
@@ -26,10 +29,10 @@
 import QQ from '@/components/profiles/contact/QQ.vue'
 import Github from '@/components/profiles/contact/Github.vue'
 import Email from '@/components/profiles/contact/Email.vue'
-import {inject, onMounted} from "vue";
+import {onMounted} from "vue";
 import gsap from "gsap";
+import useConfig from "@/config.ts";
 
-const useConfig = inject('useConfig')
 const profilesInfo = useConfig.profile
 
 onMounted(() => {
@@ -45,11 +48,24 @@ onMounted(() => {
 </script>
 
 <style scoped>
+.beian {
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  left: 0;
+  bottom: 10px;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .aside-container {
   height: 100%;
   display: flex;
   flex-direction: column;
   align-content: space-around;
+  position: relative;
 }
 
 .aside-avatar {

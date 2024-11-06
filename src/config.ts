@@ -189,7 +189,7 @@ export default {
         desc: '项 目',
         color: '#B8CCE3'
       },
-      projectItemsTitle: '项目展示',
+      projectItemsTitle: '开源项目展示',
       projectItems: [
         {
           title: '在线设计平台',
@@ -305,7 +305,7 @@ export default {
           type: '效率工具',
           title: '',
           image: './big-images/TiYi.js.png',
-          desc: '浏览器记录栈的映射管理控制与功能拓展,支持监听浏览器前进后退',
+          desc: '基于纯 iframe 的渐进式微前端框架',
           detail: {
             title: 'TiYi.js',
             md: './md/TiYi.js.md',
