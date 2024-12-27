@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {inject, onMounted, onUnmounted, ref} from "vue";
+import {inject, onUnmounted, ref} from "vue";
 import {use} from "echarts/core";
 import throttle from 'lodash/throttle'
 import FixedStick from "@/components/common/FixedStick.vue";

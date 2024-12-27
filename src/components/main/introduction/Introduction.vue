@@ -80,7 +80,7 @@ onMounted(() => {
   margin: auto;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 10% 10%;
+  padding: 10% 5%;
   width: 80%;
 }
 
@@ -104,6 +104,7 @@ onMounted(() => {
   width: 40%;
   flex: 1;
   max-width: 360px;
+  overflow-x: auto;
 
   .el-tag {
     margin: 8px;
@@ -140,7 +141,7 @@ onMounted(() => {
 
   span:nth-child(3) {
     min-width: 200px;
-    margin-left: 2rem;
+    margin-left: 1rem;
   }
 }
 </style>
